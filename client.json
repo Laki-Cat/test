@@ -1,0 +1,43 @@
+{
+    "log": {
+        "loglevel": "debug"
+    },
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 10809,
+            "protocol": "http"
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "52.199.76.103",
+                        "port": 443,
+                        "users": [
+                            {
+                                "id": "514d5fb6-f3ae-47d9-9e9a-4dba058868bb",
+                                "flow": "xtls-rprx-vision",
+                                "encryption": "none"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "show": true,
+                    "fingerprint": "chrome",
+                    "serverName": "www.huggingface.co",
+                    "publicKey": "HNBqS6mEGc_xGyMDW8MxSFNojFDAOLsQeaJbsBoIehQ",
+                    "shortId": ""
+                }
+            }
+        }
+    ]
+}
